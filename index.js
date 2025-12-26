@@ -2,7 +2,10 @@ import { Server } from "socket.io";
 
 const io = new Server(3001, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: ["http://localhost:3000",
+    "https://app-chat-basic.vercel.app/"]
+    ,
+    methods:["GET","POST"]
   },
 });
 
