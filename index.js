@@ -19,7 +19,7 @@ io.on("connection", (socket) => {
   socket.on("send-message", (text) => {
     io.emit("receive-message", {
       id: Date.now(),
-      user: socket.username || "Unknow",
+      user: socket.username || "Unknows Client",
       text,
       time: new Date().toLocaleString("th-TH"),
     });
