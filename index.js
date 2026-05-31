@@ -11,9 +11,10 @@ const io = new Server(3001, {
 });
 
 // เมื่อเชื่อมต่อสำเร็จ log socket.id หรือ ผู้ใช้งานคนนั้น
+console.log("เซิฟกำลังทำงาน")
 io.on("connection", (socket) => {
   console.log("connected:", socket.id);
-
+  
   // เมื่อมีคนเข้ามาให้ log ชื่อคนนั้นว่าเข้าร่วมแล้ว
   socket.on("join", (username) => {
     socket.username = username;
